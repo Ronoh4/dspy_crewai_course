@@ -1,0 +1,28 @@
+itinerary_creation_task:
+  description: >
+    For a {topic} trip, create a comprehensive travel itinerary.
+    Based on the traveler's preferences (e.g., "7-day trip to Japan for two,
+    focus on culture and food, mid-range budget, departing from Nairobi"),
+    include daily activities, accommodation suggestions, estimated costs,
+    and transportation between locations.
+  expected_output: >
+    A detailed daily itinerary (e.g., Day 1: Arrival, check-in, explore local market;
+    Day 2: Cultural tour, etc.) for each day of the trip.
+    Include specific recommendations for hotels, restaurants, and attractions,
+    along with estimated budget per day. Format this as a markdown list or table.
+  agent: travel_planner
+
+visa_check_task:
+  description: >
+    For a {topic} trip, given the traveler's nationality (e.g., "Kenyan citizen")
+    and all destinations in the itinerary (e.g., "Japan"), research and report on
+    all necessary visa requirements, required documents, and any specific
+    travel regulations or advisories.
+  expected_output: >
+    A clear report detailing:
+    - Visa requirements (e.g., "Visa on arrival", "e-Visa", "Schengen Visa required")
+    - Required documents for application (e.g., "Passport valid for 6 months", "Bank statements", "Invitation letter")
+    - Application process overview (e.g., "Online application", "Embassy visit")
+    - Any relevant health advisories or entry restrictions.
+    Format this as a comprehensive, easy-to-read markdown report.
+  agent: visa_expert

@@ -1,0 +1,23 @@
+research_task:
+  description: >
+    Conduct a detailed market analysis on the startup idea: "{topic}".
+    Focus on estimating the market size, identifying current trends, competitors, and demand.
+  expected_output: >
+    A bullet list (8 to 10 points) including:
+    - Market size estimate
+    - Industry growth rate
+    - Emerging trends
+    - Key competitors
+    - Pain points addressed
+    - User demand signals
+  agent: market_researcher
+
+coaching_task:
+  description: >
+    Using the market research data, determine whether the "{topic}" startup idea is viable.
+    Provide a clear Go/No-Go decision, justification, and a list of next steps.
+  expected_output: >
+    - A decision paragraph: Go or No-Go and why
+    - A list of 5 to 7 practical next steps (e.g., "Validate problem", "Build MVP", etc.)
+    - Format in markdown (but without using '```' code fences).
+  agent: startup_coach

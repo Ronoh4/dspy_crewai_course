@@ -1,0 +1,14 @@
+exploration_task:
+  description: >
+    Identify gaps and emerging opportunities in the {topic} space using up-to-date {current_year} data.
+  expected_output: >
+    A list of 8-10 market gaps or opportunities with 1-2 lines of context each.
+  agent: opportunity_explorer
+
+reporting_task:
+  description: >
+    Summarize and expand on each identified opportunity in a clear, structured format.
+  expected_output: >
+    A markdown report (no code fences) with a title and a short section per opportunity.
+  agent: insight_reporter
+  input: exploration_task  
