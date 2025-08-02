@@ -43,22 +43,23 @@ cd dspy_crewai_course
 📦 Install Dependencies
 Using Poetry:
 
-bash
-
+```bash
 poetry install
 poetry shell
+```
 Or using pip:
 
-bash
-
+```bash
 pip install -r requirements.txt
+```
 🔑 Environment Variables
 Create a .env file in the root with the following contents depending on the language model(s) you are using:
-
+```bash
 env
 ANTHROPIC_API_KEY=your_anthropic_api_key
 OPENAI_API_KEY=your_openai_api_key
 MISTRAL_API_KEY=your_mistral_api_key
+```
 
 📚 Folder Structure and What Each Teaches
 📁 vanillacrewai/ – Basic CrewAI Prompt Interception
@@ -101,8 +102,10 @@ Reintegrate the optimized prompts into the CrewAI tasks
 
 📦 Key Library Versions
 Library	Version
+```bash
 crewai	0.152.0
 dspy	2.6.27
+```
 
 🧵 Feedback and Contributions
 This repository is for educational purposes to help learners understand LLM prompt engineering and agent task optimization.
