@@ -38,6 +38,7 @@ This repository contains the complete codebase used in the course **"Optimizing 
 ```bash
 git clone https://github.com/Ronoh4/dspy_crewai_course.git
 cd dspy_crewai_course
+```
 
 📦 Install Dependencies
 Using Poetry:
