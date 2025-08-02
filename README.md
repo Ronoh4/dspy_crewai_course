@@ -1,23 +1,25 @@
-# dspy_crewai_course
-An instructional repo for learning dspy+crewai integration
+# 🧠 dspy_crewai_course  
+An instructional repo for learning DSPy + CrewAI integration.
 
-# 🧠 CrewAI + DSPy Prompt Optimization Course Resources
+---
+
+## 🧠 CrewAI + DSPy Prompt Optimization Course Resources
 
 This repository contains the complete codebase used in the course **"Optimizing CrewAI Prompts with DSPy"**. It is structured in progressive folders to help you learn how to:
 
-- Intercept and analyze CrewAI-generated prompts
-- Introduce and apply the DSPy framework for prompt optimization
-- Integrate DSPy into CrewAI workflows
+- Intercept and analyze CrewAI-generated prompts  
+- Introduce and apply the DSPy framework for prompt optimization  
+- Integrate DSPy into CrewAI workflows  
 - Use advanced optimizers like MIPROv2 to enhance prompt effectiveness
 
 ---
 
 ## 🚀 What You’ll Learn
 
-- How CrewAI internally builds prompts and how to intercept them
-- How to use DSPy's `BootstrapFewShot` module for few-shot optimization
-- How to integrate DSPy modules into CrewAI tasks and agents
-- How to run full end-to-end optimized workflows with MIPROv2
+- How CrewAI internally builds prompts and how to intercept them  
+- How to use DSPy's `BootstrapFewShot` module for few-shot optimization  
+- How to integrate DSPy modules into CrewAI tasks and agents  
+- How to run full end-to-end optimized workflows with `MIPROv2`
 
 ---
 
@@ -26,78 +28,88 @@ This repository contains the complete codebase used in the course **"Optimizing 
 ### 📦 Requirements
 
 - Python 3.10+
-- Poetry or `pip` for dependency management
-- API keys (see below)
+- Poetry or `pip`
+- API Keys (see below)
+
+---
 
 ### 📥 Clone the Repository
 
 ```bash
 git clone https://github.com/Ronoh4/dspy_crewai_course.git
-cd YOUR_REPO_NAME
+cd dspy_crewai_course
 
 📦 Install Dependencies
 Using Poetry:
-```bash
+
+bash
+
 poetry install
 poetry shell
 Or using pip:
-```bash
-pip install -r requirements.txt
 
+bash
+
+pip install -r requirements.txt
 🔑 Environment Variables
-Create a .env file in the root with the following contents depending on the language model you are using:
-```bash
+Create a .env file in the root with the following contents depending on the language model(s) you are using:
+
+env
 ANTHROPIC_API_KEY=your_anthropic_api_key
 OPENAI_API_KEY=your_openai_api_key
-MISTRAL_API_KEY=...
+MISTRAL_API_KEY=your_mistral_api_key
 
 📚 Folder Structure and What Each Teaches
 📁 vanillacrewai/ – Basic CrewAI Prompt Interception
-This folder demonstrates how to intercept CrewAI-generated prompts using monkey-patching. It's a minimal setup with a basic CrewAI task flow that prints out the system and user prompts before they're sent to the LLM.
+Demonstrates how to intercept CrewAI-generated prompts using monkey-patching. It prints system and user prompts before they are sent to the LLM.
 
-🧪 Useful for debugging and understanding how CrewAI internally builds prompts from YAML configs.
+🧪 Useful for debugging and understanding how CrewAI builds prompts from YAML configs.
 
 📁 dspyintro/ – Introduction to DSPy Framework
-This folder introduces DSPy's optimization capabilities using the BootstrapFewShot module. It shows how to:
+Introduces DSPy using the BootstrapFewShot optimizer. You’ll learn to:
 
 Define raw prompts
 
 Create training and dev sets
 
-Run a few-shot optimization cycle to improve prompts
+Run few-shot optimization cycles
 
-🧠 This section is LLM-agnostic and lays the groundwork for prompt quality improvement.
+🧠 This section is LLM-agnostic and teaches the core of DSPy's capabilities.
 
 📁 crewaibootstrap/ – DSPy + CrewAI Integration
-Here, you learn how to combine CrewAI with DSPy to improve task and agent prompts. It includes:
+This shows how to combine CrewAI and DSPy by:
 
-A CrewAI workflow with intercepted prompts
+Intercepting CrewAI prompts
 
-DSPy modules wrapping around those prompts
+Optimizing them with DSPy
 
-Returning optimized prompts back into the CrewAI flow before LLM call
+Reinjecting the improved prompts into CrewAI’s LLM flow
 
-🔄 This is the bridge between vanilla CrewAI and enhanced optimization.
+🔄 It bridges vanilla CrewAI with prompt optimization techniques.
 
 📁 crewaimiprov2/ – Advanced Optimization with MIPROv2
-This folder demonstrates the full power of DSPy's MIPROv2 optimizer on real CrewAI tasks. You'll learn how to:
+Demonstrates using DSPy's MIPROv2 for optimizing full CrewAI workflows. You'll:
 
-Prepare longer, structured CrewAI prompts
+Work with long-form prompts
 
-Optimize them using MIPROv2 with both training and dev sets
+Optimize using training + dev examples
 
-Plug the optimized prompts back into CrewAI tasks
+Reintegrate the optimized prompts into the CrewAI tasks
 
-🧬 This is the most advanced integration and shows full-cycle optimization with feedback.
+🧬 This is the most advanced example showing full-cycle LLM prompt optimization.
 
 📦 Key Library Versions
 Library	Version
-```bash
 crewai	0.152.0
 dspy	2.6.27
 
 🧵 Feedback and Contributions
-This code is for educational purposes and meant to help learners build a mental model of how LLM prompt pipelines work. If you have suggestions or would like to contribute improvements, feel free to fork and submit a PR.
+This repository is for educational purposes to help learners understand LLM prompt engineering and agent task optimization.
+
+Feel free to fork, improve, and submit a pull request!
+
+📄 License
+This repository is licensed under the MIT License.
 
 📄 License
 This repository is licensed under the MIT License.
