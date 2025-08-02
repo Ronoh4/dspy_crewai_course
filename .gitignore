@@ -1,5 +1,1 @@
-# Ignore these
-venv/
-.env/
-env/
-.venv/
+.env
